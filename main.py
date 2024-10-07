@@ -16,11 +16,11 @@ dotenv_path = Path('./.env')
 load_dotenv(dotenv_path=dotenv_path)
 
 
-os.environ["PREFECT_API_URL"] = os.getenv("PREFECT_API_URL")
-os.environ["PREFECT_API_KEY"] = os.getenv("PREFECT_API_KEY")
+# os.environ["PREFECT_API_URL"] = os.getenv("PREFECT_API_URL")
+# os.environ["PREFECT_API_KEY"] = os.getenv("PREFECT_API_KEY")
 
-os.system(f"prefect config set PREFECT_API_URL={os.getenv("PREFECT_API_URL")}")
-os.system(f"prefect config set PREFECT_API_KEY={os.getenv("PREFECT_API_KEY")}")
+# os.system(f"prefect config set PREFECT_API_URL={os.getenv("PREFECT_API_URL")}")
+# os.system(f"prefect config set PREFECT_API_KEY={os.getenv("PREFECT_API_KEY")}")
 
 @task
 def load_data(filename: str):
